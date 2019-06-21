@@ -1,4 +1,4 @@
-lFROM zabbix/zabbix-server-mysql:alpine-4.2.3
+FROM zabbix/zabbix-server-mysql:alpine-4.2.3
 
 LABEL maintainer="Zsibok Mark <zsmark@zsmark.dev>"
 LABEL description="Zabbix server with slack integration"
