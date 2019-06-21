@@ -1,0 +1,5 @@
+app:
+  build:
+    dockerfile: ./alpine/Dockerfile
+    args:
+      build_env: test

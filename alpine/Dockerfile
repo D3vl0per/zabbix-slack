@@ -15,3 +15,4 @@ RUN rm -rf /var/cache \
     && rm -rf /usr/share/apk \
     && rm -rf /var/cache \
     && rm -rf /var/spool/ \
+    
