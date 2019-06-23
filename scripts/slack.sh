@@ -13,14 +13,13 @@ problemsub='^PROBLEM.*|^Problem.*'
 
 if [[ "$subject" =~ $recoversub ]]; then
     emoji=':smile:'
-    color='#2ecc71'
-#elif [[ "$subject" =~ $problemsub ]]; then
-else
+    color='#7CFC00'
+elif [[ "$subject" =~ $problemsub ]]; then
     emoji=':frowning:'
-    color='#0C7BDC'
-#else
-#    emoji=':question:'
-#    color='#CCCCCC'
+    color='#FF0000'
+else
+    emoji=':question:'
+    color='#CCCCCC'
 fi
 
 # Build JSON payload which will be HTTP POST'ed to the Slack.com web-hook URL

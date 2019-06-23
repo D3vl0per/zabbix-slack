@@ -6,13 +6,13 @@ LABEL VERSION="1.0"
 
 COPY ./scripts/slack.sh /usr/lib/zabbix/alertscripts/slack.sh
 
-RUN apk add --no-cache curl \
-    && chown nobody:nogroup /usr/lib/zabbix/alertscripts/slack.sh
+RUN apk add --no-cache curl
+    #&& chown nobody:nogroup /usr/lib/zabbix/alertscripts/slack.sh
 
 RUN rm -rf /var/cache \
     && rm -rf /etc/apk \
     && rm -rf /lib/apk/db/ \
     && rm -rf /usr/share/apk \
     && rm -rf /var/cache \
-    && rm -rf /var/spool/ \
+    && rm -rf /var/spool/
     
