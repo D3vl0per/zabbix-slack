@@ -1,4 +1,4 @@
-FROM zabbix/zabbix-server-mysql:alpine-4.2.3
+FROM zabbix/zabbix-server-mysql:alpine-4.4.3
 
 LABEL maintainer="Zsibok Mark <zsmark@zsmark.dev>"
 LABEL description="Zabbix server with slack integration"
@@ -9,10 +9,9 @@ COPY ./scripts/slack.sh /usr/lib/zabbix/alertscripts/slack.sh
 RUN apk add --no-cache curl
     #&& chown nobody:nogroup /usr/lib/zabbix/alertscripts/slack.sh
 
+# disable alpine package install (for security reasons)
 RUN rm -rf /var/cache \
     && rm -rf /etc/apk \
-    && rm -rf /lib/apk/db/ \
+    && rm -rf /lib/apk/db \
     && rm -rf /usr/share/apk \
-    && rm -rf /var/cache \
-    && rm -rf /var/spool/
-    
+    && rm -rf /var/spool
